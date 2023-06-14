@@ -28,7 +28,7 @@ export default function CurrentLoc() {
 
   useEffect(() => {
     nav();
-  }, [City[1]]);
+  }, [City]);
   
   return (
     <div className="w-[100%] h-[100vh] justify-center flex-col flex items-center">
