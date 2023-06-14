@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import SyncLoader from "react-spinners/SyncLoader";
 
 export default function OtherCity() {
   const [Weather, setWeather] = useState([]);
   const [Location, setLocation] = useState([]);
   const [City, setCity] = useState("hisar");
-  const [data, setdata] = useState(Weather);
+  const [Forecast, setForecast] = useState("");
+  const [icon, seticon] = useState("");
+  
 
   const navigate = async () => {
     let response = await fetch(
@@ -18,30 +21,35 @@ export default function OtherCity() {
     let weather = Data.current;
     setWeather(weather);
     setLocation(location);
+    seticon(Data.current.condition.icon);
+    setForecast(Data.current.condition.text);
   };
   useEffect(() => {
     navigate();
-  }, []);
+  },[]);
   
-  return (
-    <div className="w-[100%] h-[100vh] justify-center flex flex-col items-center">
-        <h1 className="text-white font-mono text-4xl">Welcome To Weather Forcast</h1>
-      {!Weather ? (
-        <div
-          className="w-[100%]  h-[100vh] justify-center flex items-end "
-          style={{
-            backgroundImage:
-              "url(https://cdn.dribbble.com/users/162970/screenshots/6456084/casual-bounce.gif)",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "100%,100vh",
-          }}
-        >
-          <h1 className="text-white font-mono text-6xl mb-16">
-            Getting Weather Data
-          </h1>
-        </div>
-      ) : (
+  const [loading, setloading] = useState(false);
+  useEffect(() => {
+    setloading(true);
+    setTimeout(() => {
+      setloading(false);
+    }, 2000);
+  }, []);
+ 
+  return (<>
+{loading ? (
+
+      <div className="App bg-black flex  flex-col w-[100%] justify-center items-center  h-[100vh]"  style={{
+        backgroundImage:
+          "url(https://cdn.dribbble.com/users/1496969/screenshots/5403850/download_20181016_175021.gif)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100% 100%",
+      }}>
+        <SyncLoader color="#36d7b7" />
+        <h1 className="text-4xl text-neutral-200 mt-10">Please Wait...</h1>
+      </div>
+   
+    ) : (
         <div
           className="w-[80%] mt-7 h-[70%] lg:w-[40%] 2xl:w-[50%] bg-black flex flex-col  items-center  rounded-xl shadow-white"
           style={{
@@ -58,7 +66,8 @@ export default function OtherCity() {
               }}
               id="input"
               type="text"
-              className="w-56 text-2xl font-serif h-14 placeholder:text-center placeholder:text-cyan-400 text-orange-600 text-center outline-none rounded-xl"
+              className="w-56 text-2xl font-serif h-14 placeholder:text-center ml-7 placeholder:text-cyan-400 text-orange-600 text-center outline-none rounded-xl"
+            placeholder="Enter City "
             />
 
             <img
@@ -69,20 +78,24 @@ export default function OtherCity() {
               }}
               className="w-12 cursor-pointer animation duration-100 hover:scale-125 ml-4"
               src="map.png"
-              alt=""
+              alt=''
             />
           </div>
 
           <div className="w-[100%] h-[10vh]  flex justify-center items-center flex-col">
+          <div className="flex justify-between w-[18%] items-center">
+            <img className="w-8" src="cityscape-svgrepo-com.svg" alt="" />
             <h1 className="text-white font-serif text-2xl">{Location.name}</h1>
-            <h1 className="text-white font-serif text-xl">
+
+            </div>
+            <h1 className="text-white font-serif text-xl mt-4">
               {Location.region},({Location.country})
             </h1>
           </div>
           <div className="w-[100%] h-[10vh]  flex justify-center items-center flex-col">
             <img
               className="w-32 cursor-pointer  "
-              src="//cdn.weatherapi.com/weather/64x64/day/176.png"
+              src={icon}
               alt=""
             />
           </div>
@@ -90,7 +103,7 @@ export default function OtherCity() {
             <h1 className="text-white font-mono text-6xl">
               {Weather.temp_c}C°
             </h1>
-            <h1 className="text-white font-mono text-2xl">Forecast</h1>
+            <h1 className="text-white font-mono text-2xl">{Forecast}</h1>
           </div>
 
           <div className="w-[90%] h-[10vh] mt-10 rounded-xl  flex justify-center items-center flex-col bg-[#FFF8F068] shadow-2xl shadow-slate-300">
@@ -135,18 +148,26 @@ export default function OtherCity() {
           </div>
         </div>
       )}
-      <div className="w-[50%] h-[5vh]  mt-10 flex justify-center items-center">
-        <Link to={"/Other"}>
-          <button className="px-7 py-4 rounded-xl hover:bg-orange-600 bg-yellow-500">
-            Other Cities
-          </button>
-        </Link>
-        <Link to={"/"}>
-          <button className="px-7 ml-10 py-4 rounded-xl hover:bg-orange-600 bg-green-500">
-            My Location
-          </button>
-        </Link>
-      </div>
-    </div>
+      {loading ? (
+       
+         
+       <></>
+
+     
+  
+   ) : (
+   <div className="w-[50%] h-[5vh] mt-10  flex justify-center items-center">
+     <Link to={"/Other"}>
+       <button className="px-7 py-4 rounded-xl hover:bg-orange-600 bg-yellow-500">
+         Other Cities
+       </button>
+     </Link>
+     <Link to={"/"}>
+       <button className="px-7 ml-10 py-4 rounded-xl hover:bg-orange-600 bg-green-500">
+         My Location
+       </button>
+     </Link>
+   </div>)}
+      </>
   );
 }
