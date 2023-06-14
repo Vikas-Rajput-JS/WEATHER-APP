@@ -5,7 +5,6 @@ export default function CurrentLoc() {
   const [Weather, setWeather] = useState([]);
   const [Location, setLocation] = useState([]);
   const [City, setCity] = useState([""]);
-  const [data, setdata] = useState(Weather);
 
   const nav = () => {
     navigator.geolocation.getCurrentPosition(async (area) => {
