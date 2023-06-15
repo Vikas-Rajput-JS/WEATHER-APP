@@ -101,7 +101,7 @@ export default function OtherCity() {
           </div>
           <div className="w-[100%] h-[10vh]  flex justify-center items-center flex-col">
             <h1 className="text-white font-mono mt-4 text-xl sm:text-4xl xl:text-5xl">
-              {Weather.temp_c}C°
+              {Weather.temp_c}°C
             </h1>
             <div className=" flex justify-center items-center h-[100%] w-[100%]">
             <img className="w-10 cursor-pointer mt-4  " src='reshot-icon-weather-EJPNZMV8U5.svg' alt="" />
