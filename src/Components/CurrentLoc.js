@@ -70,7 +70,7 @@ export default function CurrentLoc() {
           <div className="w-[100%] h-[10vh]  flex justify-center items-center flex-col">
             <div className="flex justify-between w-[18%] items-center mt-4">
             <img className="w-8" src="cityscape-svgrepo-com.svg" alt="" />
-            <h1 className="text-white font-serif text-xl lg:text-2xl ">{Location.name}</h1>
+            <h1 className="text-white font-serif text-xl lg:text-2xl mt-3 ">{Location.name}</h1>
 
             </div>
             <h1 className="text-white font-serif text-lg lg:text-2xl mt-3">
