@@ -12,7 +12,7 @@ export default function OtherCity() {
 
   const navigate = async () => {
     let response = await fetch(
-      `https://api.weatherapi.com/v1/current.json?key=1fadb60ed4ae45e8aad53624231306&q=${City}`
+      `http://api.weatherapi.com/v1/current.json?key=1fadb60ed4ae45e8aad53624231306&q=${City}`
     );
 
     let Data = await response.json();
@@ -51,7 +51,7 @@ export default function OtherCity() {
    
     ) : (
         <div
-          className="w-[80%] mt-7 h-[80vh] lg:w-[40%] 2xl:w-[50%] bg-black flex flex-col  items-center  rounded-xl shadow-white"
+          className="w-[80%] mt-7 h-[80vh] lg:w-[40%] 2xl:w-[50%] bg-black flex flex-col  items-center  rounded-xl shadow-xl   shadow-pink-700"
           style={{
             backgroundImage:
               "url(https://media.tenor.com/9vRAkntogEMAAAAd/background.gif)",
