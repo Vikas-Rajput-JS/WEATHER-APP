@@ -94,7 +94,7 @@ export default function OtherCity() {
           </div>
           <div className="w-[100%] h-[10vh]  flex justify-center items-center flex-col">
             <img
-              className="sm:w-16 lg:w-16 mt-4  w-12 cursor-pointer  "
+              className="sm:w-16 lg:w-16 mt-4  w-14 cursor-pointer  "
               src={icon}
               alt=""
             />
