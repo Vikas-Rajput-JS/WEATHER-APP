@@ -5,7 +5,7 @@ import SyncLoader from "react-spinners/SyncLoader";
 export default function CurrentLoc() {
   const [Weather, setWeather] = useState([]);
   const [Location, setLocation] = useState([]);
-  const [City, setCity] = useState([]);
+  
   const [Forecast, setForecast] = useState("");
   const [icon, seticon] = useState("");
 
