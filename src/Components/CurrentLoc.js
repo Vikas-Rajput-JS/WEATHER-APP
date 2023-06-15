@@ -40,7 +40,7 @@ export default function CurrentLoc() {
     setloading(true);
     setTimeout(() => {
       setloading(false);
-    }, 10);
+    }, 3000);
   }, []);
 
   return (
