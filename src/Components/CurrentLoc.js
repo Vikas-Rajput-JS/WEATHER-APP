@@ -19,7 +19,7 @@ export default function CurrentLoc() {
         // setCity([lat, long]);
 
         let response = await fetch(
-          `http://api.weatherapi.com/v1/current.json?key=1fadb60ed4ae45e8aad53624231306&q=${lat},${long}`
+          `https://api.weatherapi.com/v1/current.json?key=1fadb60ed4ae45e8aad53624231306&q=${lat},${long}`
         );
 
         let Data = await response.json();
