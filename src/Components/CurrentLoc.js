@@ -78,7 +78,7 @@ export default function CurrentLoc() {
             </h1>
           </div>
           <div className="w-[100%] h-[10vh]  flex justify-center items-center flex-col">
-            <img className="sm:w-14 lg:w-16 xl:w-24  w-14 cursor-pointer  " src={icon} alt="" />
+            <img className="sm:w-14 lg:w-16 xl:w-24 mt-4  w-14 cursor-pointer  " src={icon} alt="" />
           </div>
           <div className="w-[100%] h-[10vh]  flex justify-center items-center flex-col">
             <h1 className="text-white font-mono text-2xl lg:text-4xl">
