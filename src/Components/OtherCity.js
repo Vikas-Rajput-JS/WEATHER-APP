@@ -12,7 +12,7 @@ export default function OtherCity() {
 
   const navigate = async () => {
     let response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=1fadb60ed4ae45e8aad53624231306&q=${City}`
+      `https://api.weatherapi.com/v1/current.json?key=1fadb60ed4ae45e8aad53624231306&q=${City}`
     );
 
     let Data = await response.json();
