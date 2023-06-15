@@ -82,7 +82,7 @@ export default function CurrentLoc() {
           </div>
           <div className="w-[100%] h-[10vh]  flex justify-center items-center flex-col">
             <h1 className="text-white font-mono text-2xl lg:text-4xl">
-              {Weather.temp_c}C°
+              {Weather.temp_c}°C
             </h1>
             <div className=" flex justify-center items-center h-[100%] w-[100%]">
             <img className="sm:w-12 mt-4  w-8  " src='reshot-icon-weather-EJPNZMV8U5.svg' alt="" />
