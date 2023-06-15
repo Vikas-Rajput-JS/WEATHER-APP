@@ -100,7 +100,7 @@ export default function OtherCity() {
             />
           </div>
           <div className="w-[100%] h-[10vh]  flex justify-center items-center flex-col">
-            <h1 className="text-white font-mono mt-4 text-xl sm:text-4xl xl:text-5xl">
+            <h1 className="text-white font-mono mt-4 text-2xl sm:text-4xl xl:text-5xl">
               {Weather.temp_c}°C
             </h1>
             <div className=" flex justify-center items-center h-[100%] w-[100%]">
