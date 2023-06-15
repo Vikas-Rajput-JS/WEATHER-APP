@@ -19,7 +19,7 @@ export default function CurrentLoc() {
         // setCity([lat, long]);
 
         let response = await fetch(
-          `https://api.weatherapi.com/v1/current.json?key=1fadb60ed4ae45e8aad53624231306&q=${lat},${long}`
+          `http://api.weatherapi.com/v1/current.json?key=1fadb60ed4ae45e8aad53624231306&q=${lat},${long}`
         );
 
         let Data = await response.json();
@@ -40,7 +40,7 @@ export default function CurrentLoc() {
     setloading(true);
     setTimeout(() => {
       setloading(false);
-    }, 3000);
+    }, 50);
   }, []);
 
   return (
@@ -59,7 +59,7 @@ export default function CurrentLoc() {
      
       ) : (
         <div
-          className="w-[80%] h-[70%] lg:w-[40%] 2xl:w-[50%] bg-black flex flex-col  items-center  rounded-xl shadow-white"
+          className="w-[80%] h-[70%] lg:w-[40%] 2xl:w-[50%] bg-black flex flex-col  items-center shadow-xl  rounded-xl shadow-pink-700"
           style={{
             backgroundImage:
               "url(https://media.tenor.com/9vRAkntogEMAAAAd/background.gif)",
