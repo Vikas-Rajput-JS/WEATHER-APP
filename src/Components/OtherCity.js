@@ -54,7 +54,7 @@ export default function OtherCity() {
           className="w-[95%] mt-7 h-[80vh] lg:w-[40%] 2xl:w-[50%] bg-black flex flex-col  items-center  rounded-xl shadow-xl   shadow-pink-700"
           style={{
             backgroundImage:
-              "url(https://media.tenor.com/9vRAkntogEMAAAAd/background.gif)",
+              "url(https://i.pinimg.com/originals/05/5e/ac/055eac25cb71d620c44f903055f372e9.gif)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "100% 100%",
           }}
