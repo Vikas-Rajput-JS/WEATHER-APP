@@ -62,7 +62,7 @@ export default function CurrentLoc() {
           className="w-[90%] sm:w-[60%] h-[70%] lg:w-[40%] 2xl:w-[50%] bg-black flex flex-col  items-center shadow-xl  rounded-xl shadow-pink-700"
           style={{
             backgroundImage:
-              "url(https://media.tenor.com/9vRAkntogEMAAAAd/background.gif)",
+              "url(https://i.pinimg.com/originals/05/5e/ac/055eac25cb71d620c44f903055f372e9.gif)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "100% 100%",
           }}
