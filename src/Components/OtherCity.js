@@ -46,7 +46,7 @@ export default function OtherCity() {
         backgroundSize: "100% 100%",
       }}>
         <SyncLoader color="#36d7b7" />
-        <h1 className="text-4xl text-neutral-200 mt-10">Please Wait...</h1>
+        <h1 className="text-4xl text-neutral-200 font-serif mt-10">Please Wait...</h1>
       </div>
    
     ) : (
