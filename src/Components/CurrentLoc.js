@@ -40,7 +40,7 @@ export default function CurrentLoc() {
     setloading(true);
     setTimeout(() => {
       setloading(false);
-    }, 3000);
+    }, 300);
   }, []);
 
   return (
@@ -56,7 +56,6 @@ export default function CurrentLoc() {
           <SyncLoader color="#36d7b7" />
           <h1 className="text-4xl text-neutral-200 mt-10">Please Wait...</h1>
         </div>
-     
       ) : (
         <div
           className="w-[90%] sm:w-[60%] h-[70%] lg:w-[40%] 2xl:w-[50%] bg-black flex flex-col  items-center shadow-xl  rounded-xl shadow-pink-700"
