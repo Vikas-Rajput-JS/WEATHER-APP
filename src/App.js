@@ -5,7 +5,7 @@ import CurrentLoc from './Components/CurrentLoc';
 import OtherCity from './Components/OtherCity';
 
 function App() {
-  alert('Make Sure You Allow all the Permissions')
+  alert('Make Sure You Allow All the Permissions')
   return (
     <div className="w-[100%] h-[100vh] flex justify-center items-center flex-col" style={{backgroundImage:'url(https://cdn.dribbble.com/users/1595839/screenshots/11700339/media/5b39c07a6a721b6b440288c6c6ec5cb1.gif)',backgroundRepeat:'no-repeat',backgroundSize:'100% 100vh'}}>
       
