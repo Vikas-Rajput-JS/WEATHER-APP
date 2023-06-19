@@ -9,7 +9,7 @@
 
 - 💬 Ask me about **ReactJs,Redux,Javascript,Native**
 
-- 📫 How to reach me **Vikasrajput95182@gmail.com**
+    - 📫 How to reach me **Vikasrajput95181@gmail.com**
 
 - 📄 Know about my experiences [https://portfolio-vikas.pages.dev](https://portfolio-vikas.pages.dev)
 
